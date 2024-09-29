@@ -1,11 +1,11 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Ex5_SortingArray {
+public class SortingArray {
     public static void main(String[] args){
         int n;
 
-        System.out.println("Please enter number of elements: ");
+        System.out.println("Enter number of elements: ");
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
         int[] a = new int[n];
