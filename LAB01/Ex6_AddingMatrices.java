@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Ex6_AddingMatrices {
+public class AddingMatrices {
     public static void main(String[] args){
         int n,m;
         System.out.println("Please enter number of rows: ");
