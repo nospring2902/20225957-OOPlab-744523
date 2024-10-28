@@ -1,25 +1,32 @@
 import javax.swing.JOptionPane;
-public class CalculateTwoNumbers {
+
+public class NumberOperations {
     public static void main(String[] args) {
-        String strNum1, strNum2;
-        String strNotification = "You've just entered: ";
+        String input1, input2;
+        String message = "You have entered: ";
 
-        strNum1 = JOptionPane.showInputDialog(null,"Please input the first number: ","Input the first number",JOptionPane.INFORMATION_MESSAGE);
-        strNotification+= strNum1 + " and ";
+        input1 = JOptionPane.showInputDialog(null, "Enter the first number:", "Input First Number", JOptionPane.QUESTION_MESSAGE);
+        message += input1 + " and ";
 
-        strNum2 = JOptionPane.showInputDialog(null,"Please input the second number: ","Input the second number",JOptionPane.INFORMATION_MESSAGE);
-        strNotification+= strNum2;
+        input2 = JOptionPane.showInputDialog(null, "Enter the second number:", "Input Second Number", JOptionPane.QUESTION_MESSAGE);
+        message += input2;
 
-        double num1 = Double.parseDouble(strNum1), num2 = Double.parseDouble(strNum2);
-        double sum = num1 + num2;
-        double difference = num1 - num2;
-        double product = num1 * num2;
-        int quotient = (int) (num1 / num2);
-        int division = (int) (num1%num2);
-        JOptionPane.showMessageDialog(null,"Sum is " + sum);
-        JOptionPane.showMessageDialog(null,"Difference is " + difference);
-        JOptionPane.showMessageDialog(null,"Product is " + product);
-        JOptionPane.showMessageDialog(null,"Quotient is " + quotient);
+        double firstNumber = Double.parseDouble(input1);
+        double secondNumber = Double.parseDouble(input2);
+
+        double sum = firstNumber + secondNumber;
+        double diff = firstNumber - secondNumber;
+        double product = firstNumber * secondNumber;
+        int quotient = (int) (firstNumber / secondNumber);
+        int remainder = (int) (firstNumber % secondNumber);
+
+        JOptionPane.showMessageDialog(null, message);
+        JOptionPane.showMessageDialog(null, "The sum is: " + sum);
+        JOptionPane.showMessageDialog(null, "The difference is: " + diff);
+        JOptionPane.showMessageDialog(null, "The product is: " + product);
+        JOptionPane.showMessageDialog(null, "The quotient is: " + quotient);
+        JOptionPane.showMessageDialog(null, "The remainder is: " + remainder);
+
         System.exit(0);
     }
 }
