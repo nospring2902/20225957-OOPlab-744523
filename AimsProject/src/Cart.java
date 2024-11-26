@@ -107,4 +107,17 @@ public class Cart {
         return sum;
     }
 	
+	// hien thong tin dia
+	public void displayDigitalVideoDisc() {
+		StringBuilder output = new StringBuilder("***********************CART*********************** \nOrdered items: \n");
+        for(int i = 0; i < qtyOrdered; i++) {
+            output.append(i+1 + ". DVD - " + itemsOrdered[i].getTitle() + " - " + itemsOrdered[i].getCategory() + " - "
+                    + itemsOrdered[i].getDirector() + " - " + itemsOrdered[i].getLength() + ": "
+                    + itemsOrdered[i].getCost() + " $\n");
+        }
+        output.append("Total cost: ").append(totalCost()).append(" $\n");
+        output.append("***************************************************\n");
+        System.out.println(output);
+	}
+	
 }
