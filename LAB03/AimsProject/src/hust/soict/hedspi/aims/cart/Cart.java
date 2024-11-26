@@ -22,7 +22,7 @@ public class Cart {
         }
 	}
 
-/*	
+/* 
 	// them list dia DVD vao gio hang 2.1
 	public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
 	    for (DigitalVideoDisc disc : dvdList) {
@@ -37,8 +37,8 @@ public class Cart {
 	        }
 	    }
 	}
-*/
 
+*/
 
 	// them so luong tuy y dia DVD 2.1
 	public void addDigitalVideoDisc(DigitalVideoDisc... discs) {
