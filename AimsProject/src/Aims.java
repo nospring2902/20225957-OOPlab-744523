@@ -18,6 +18,10 @@ public class Aims {
 		System.out.println("Total Cost is: ");
 		System.out.println(anOrder.totalCost());
 		
+		// tim kiem bang ID
+		anOrder.searchById(2);
+		anOrder.searchByTitle("The Lion King");
+		
 		// Remove from the cart
 		anOrder.removeDigitalVideoDisc(dvd2);
 		
