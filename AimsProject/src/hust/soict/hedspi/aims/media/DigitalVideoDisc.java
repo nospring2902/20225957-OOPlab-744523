@@ -24,6 +24,15 @@ public class DigitalVideoDisc extends Disc implements Playable{
 		System.out.println("Playing DVD: " + this.getTitle());
 		System.out.println("DVD length: " + this.getLength());
 	}
+	
+	public String toString()
+	{
+		return "DVD: " + this.getTitle() +
+				" - Category: " + this.getCategory() +
+				" - Director: " + this.getDirector() +
+				" - DVD length: " + this.getLength() +
+				" - Cost: " + this.getCost() + "$";
+	}
 
 }
 
