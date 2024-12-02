@@ -65,6 +65,16 @@ public abstract class Media {
 	public boolean isMatch(String title) {
         return this.getTitle().toLowerCase().contains(title.toLowerCase());
     }
+	
+	public boolean equals(Object obj) {
+    	if (obj == this) {
+    		return true;
+    	}
+    	if (!(obj instanceof Media)) {
+    		return false;
+    	}
+    	return ((Media)obj).getTitle() == this.getTitle();
+    }
 
 }
 
