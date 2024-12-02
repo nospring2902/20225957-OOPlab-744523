@@ -75,6 +75,12 @@ public abstract class Media {
     	}
     	return ((Media)obj).getTitle() == this.getTitle();
     }
+	
+	public String toString() {
+    	return "Media: " + this.getTitle() + 
+    			" - Category: " + this.getCategory() + 
+    			" - Cost: " + this.getCost() + "$";
+    }
 
 }
 
