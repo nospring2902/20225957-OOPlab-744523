@@ -24,16 +24,24 @@ public class Store {
     }
     
 
-    public String toString() {
-        StringBuilder string = new StringBuilder("****************STORE***************\nItems in the store: \n");
-        if(itemsInStore.size() == 0) string.append("The store is empty!\n");
-        else {
-            for (Media media : itemsInStore) {
-            	if (media != null)
-            		System.out.println(media);
-            }
-        }
-        string.append("***************************************");
-        return string.toString();
+    public void print() {
+    	if (itemsInStore.size() == 0) {
+			System.out.println("The store is empty!");
+		} else {
+			System.out.println("**************************STORE INFO**************************");
+			for (Media media : itemsInStore) {
+				System.out.println(media);
+			}
+			System.out.println("*******************************************************************");
+		}
     }
+    
+    public Media search(String title) {
+		for (Media media : itemsInStore) {
+			if (media.getTitle().equals(title)) {
+				return media;
+			}
+		}
+		return null;
+	}
 }

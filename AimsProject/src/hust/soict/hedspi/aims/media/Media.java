@@ -52,20 +52,20 @@ public abstract class Media implements Comparable<Media>{
 
 	public Media(String title) {
 		this.title = title;
-		this.id = nbMedia++;
+		this.id = ++nbMedia;
 	}
 
 	public Media(String title, String category) {
 		this.title = title;
 		this.category = category;
-		this.id = nbMedia++;
+		this.id = ++nbMedia;
 	}
 
 	public Media(String title, String category, float cost) {
 		this.title = title;
 		this.category = category;
 		this.cost = cost;
-		this.id = nbMedia++;
+		this.id = ++nbMedia;
 	}
 	
 	public boolean isMatch(String title) {
@@ -95,6 +95,10 @@ public abstract class Media implements Comparable<Media>{
         } else {
             return Double.compare(this.getCost(), other.getCost());
         }
+    }
+	
+	public void play() {
+        System.out.println("Playing media");
     }
 
 }
