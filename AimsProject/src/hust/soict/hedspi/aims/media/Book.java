@@ -19,8 +19,16 @@ public class Book extends Media{
 	}
 
 
-	public Book() {
-		// TODO Auto-generated constructor stub
+	public Book(String title) {
+		super(title);
+	}
+	
+	public Book(String title, String category) {
+		super(title, category);
+	}
+	
+	public Book(String title, String category, float cost) {
+		super(title, category, cost);
 	}
 	
 	public void addAuthor(String authorName) {
@@ -38,5 +46,11 @@ public class Book extends Media{
             System.out.println(authorName + "is not in the list.");
         }
     }
+	
+	public String toString() {
+		return "Book: " + this.getTitle() + 
+				" - Category: " + this.getCategory() + 
+				" - Cost: " + this.getCost() + "$\n";
+	}
 
 }
