@@ -4,10 +4,6 @@ public class DigitalVideoDisc extends Media{
 	
 	private String director;
 	private int length;
-
-	
-	
-	
     
 	public DigitalVideoDisc(String title) {
 		super(title);
@@ -38,9 +34,8 @@ public class DigitalVideoDisc extends Media{
 		return length;
 	}
 
-
-
     public void setDirector(String director){this.director = director;}
     public void setLength(int length){this.length = length;}
 
 }
+

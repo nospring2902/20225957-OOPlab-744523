@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Book extends Media{
 	
-	
 	private List<String> authors = new ArrayList<String>();
 
 

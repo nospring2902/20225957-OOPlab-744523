@@ -1,7 +1,7 @@
 package hust.soict.hedspi.aims.media;
 
 public abstract class Media {
-	
+
 	private int id;
 	private String title;
 	private String category;
@@ -63,3 +63,4 @@ public abstract class Media {
 	}
 
 }
+
