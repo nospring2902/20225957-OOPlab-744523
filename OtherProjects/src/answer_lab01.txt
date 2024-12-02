@@ -1,0 +1,23 @@
+- What happens if users choose “Cancel”? 
+Khi người dùng chọn Cancel thì thông báo "You've chosen: No" sẽ xuất hiện.
+Nguyên nhân: đoạn code (option == JOptionPane.YES_OPTION?"Yes":"No") chỉ kiểm tra lựa chọn "YES". Do đó, khi người dùng 
+chọn lựa chọn khác ngoài YES thì đều mặc định trả về "You've chosen: No".
+- How to customize the options to users, e.g. only two options: “Yes” and “No”, OR “I do” and “I don’t” 
++ Đưa ra lựa chọn "Yes" và "No"
+import javax.swing.JOptionPane;
+public class ChoosingOption {
+    public static void main(String[] args) {
+        String[] option = {"Yes", "No"};
+        int choice = JOptionPane.showOptionDialog(
+        	null, 
+        	"Do you want to change to the first class ticket?", 
+        	"Choose an option", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, 
+        	null, 
+        	option,
+        	option[0]
+        );
+        JOptionPane.showMessageDialog(null,(choice == 0 ? "You've chosen: Yes" : "You've chosen: No"));  
+    }
+}
++ Đưa ra lựa chọn "I do" và "I don't"
+Thay String[] option = {"I do", "I don't"};
